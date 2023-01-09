@@ -21,7 +21,7 @@ def upload_person():
     return ''
 
 
-@app.route('/api/v1/show-admins', methods=['GET'])
+@app.route('/api/v1/show-admins', methods=['GET'])  # http://79.133.181.168:5000/api/v1/show-admins
 def show_admins():
     return Response(json.dumps(database.get_admins_list(), ensure_ascii=False),
                     mimetype='application/json; charset=utf-8')
@@ -35,4 +35,4 @@ def show_persons():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=8000)
